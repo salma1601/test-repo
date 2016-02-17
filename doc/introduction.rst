@@ -10,7 +10,7 @@ Introduction: procasl
 What is procasl: Preprocessing and quantification of ASL
 ========================================================
 
-    Procasl builds relevant **pipelines** for processing ASL data.
+    Procasl builds relevant **pipelines** for processing Arterial Spin Labeling data.
     For the moment, it is dedicated to pulsed ASL.
 
 ASL basics
