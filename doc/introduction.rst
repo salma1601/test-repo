@@ -7,10 +7,8 @@ Introduction: procasl
     :depth: 1
 
 
-What is procasl: preprocessing and quantification of ASL
+What is procasl: Preprocessing and quantification of ASL
 ========================================================
-
-.. topic:: **Why use procasl?**
 
     Procasl builds relevant **pipelines** for processing ASL data.
     For the moment, it is dedicated to pulsed ASL.
@@ -22,7 +20,7 @@ Weighting the MRI signal by cerebral blood flow
 -----------------------------------------------
 *"Aristotle taught that the brain exists merely to cool the blood and is not involved in the process of thinking. This is true only of certain persons." -Will Cuppy*
 
-Blood flows from carotid arteries to capilleray bed. The volume of arterial blood (mL) delivered to 100 g of tissue per minute is called the Cerebral Blood Flow (CBF). In human brain, it has a typical value of 60 mL/100 g-minute. CBF is a fundamental physiological quantity, closely related to brain function []. It is an important indicator of tissue health [] as well as neuronal activity [].
+Blood flows from carotid arteries to capilleray bed. The volume of arterial blood (mL) delivered to 100 g of tissue per minute is called the Cerebral Blood Flow (CBF). In human brain, it has a typical value of 60 mL/100 g-minute. CBF is a fundamental physiological quantity, closely related to brain function. It is an important indicator of tissue health as well as neuronal activity.
 
 Prior to ASL, the techniques used for determining cerebral blood flow were rather invasive and involved the 
 use of exogenous contrast agents, such as the 15O H2O radiotracer in Positron Emission Tomography (PET).
@@ -42,7 +40,8 @@ Many modalities and many sequences exist, and ASL techniques is an active resear
 
 From ASL images to CBF: Quantification how tos
 ----------------------------------------------
-CBF ~ M_ctl - M_tag
+CBF is proportional to the difference in magnetization between control and labeled images.
+
 To obtain absolute perfusion (CBF) in ml/100ml/min,
 the mean difference image is multiplied by constant factors.
 This scaling is essential for “whole brain” diseases,
@@ -57,8 +56,7 @@ change relative perfusion.
 
 - How does disease affect blood flow distribution
 
-- Relative perfusion of tumor compared to normal appearing
-GM/WM
+- Relative perfusion of tumor compared to normal appearing GM/WM
 
 - Comparison with contralateral hemisphere
 
@@ -70,13 +68,11 @@ models require additional information that involves
 more scan time, and often only reduces systematic errors
 at the cost of SNR. Types of additional information
 include ATT, water exchange rates and times between
-blood and tissue, tissue T 1 values, and tissue segmenta-
-tion. Ongoing active research aims to more fully under-
-stand the range and effects of these parameters, but the
+blood and tissue, tissue T1 values, and tissue segmentation.
+Ongoing active research aims to more fully understand the range and effects of these parameters, but the
 complexity, uncertainty, and additional noise associated
-with correcting for these factors was deemed to be coun-
-terproductive as a default protocol at this stage of adop-
-tion of clinical ASL.
+with correcting for these factors was deemed to be counterproductive
+as a default protocol at this stage of adoption of clinical ASL.
 
 
 :General kinetic model:
@@ -97,7 +93,7 @@ The cerebral blood flow (CBF) is a fundamental physiological quantity, closely r
 
 Whetting Your Appetite
 ----------------------
-
+To complete.
 
 Dependencies
 ============
