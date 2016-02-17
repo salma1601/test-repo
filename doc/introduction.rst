@@ -12,24 +12,20 @@ What is procasl: preprocessing and quantification of ASL
 
 .. topic:: **Why use procasl?**
 
-    Procasl builds relevant **pipelines** for processing ASL data(
-    :ref:`single subject pipeline <single_subject>`,
-    :ref:`second level pipeline <second_level>`).
-
-    For the moment, Procasl is dedicated to pulsed ASL data.
+    Procasl builds relevant **pipelines** for processing ASL data.
+    For the moment, it is dedicated to pulsed ASL.
 
 ASL basics
 ==========
 
 Weighting the MRI signal by cerebral blood flow
 -----------------------------------------------
-"Aristotle taught that the brain exists merely to cool the blood and is not involved in the process of thinking. This is true only of certain persons." -Will Cuppy
+*"Aristotle taught that the brain exists merely to cool the blood and is not involved in the process of thinking. This is true only of certain persons." -Will Cuppy*
 
 Blood flows from carotid arteries to capilleray bed. The volume of arterial blood (mL) delivered to 100 g of tissue per minute is called the Cerebral Blood Flow (CBF). In human brain, it has a typical value of 60 mL/100 g-minute. CBF is a fundamental physiological quantity, closely related to brain function []. It is an important indicator of tissue health [] as well as neuronal activity [].
 
 Prior to ASL, the techniques used for determining cerebral blood flow were rather invasive and involved the 
-use of exogenous contrast agents, such as the 15O H2O radiotracer in Positron Emission Tomography (PET) and ... in [nitrous oxide method, perfusion
-CT and DSC-MRI].
+use of exogenous contrast agents, such as the 15O H2O radiotracer in Positron Emission Tomography (PET).
 
 
 Imaging principle: Labeling arterial blood water magnetically
@@ -42,7 +38,6 @@ First, arterial blood water is magnetically labeled just below the region (slice
 The experiment is then repeated without labeling the arterial blood to create another image (called the control image). The control image and the tag image are subtracted to produce a perfusion image. This image will reflect the amount of arterial blood delivered to each voxel within the slice within the transit time.
 
 Many modalities and many sequences exist, and ASL techniques is an active research field.
-More on http://fmri.research.umich.edu/research/main_topics/asl.php
 
 
 From ASL images to CBF: Quantification how tos
@@ -104,8 +99,29 @@ Whetting Your Appetite
 ----------------------
 
 
-Installation
+Dependencies
 ============
+The required dependencies to use the software are the python packages:
+
+* Python 2.7
+* setuptools
+* Numpy >= 1.6.2
+* SciPy >= 0.11
+* Nibabel >= 2.0.1
+* Nilearn >= 0.1.3
+* Matplotlib >= 1.1.1
+* Nipype 0.11.0
+* NetworkX >= 1.7
+* Enthought Traits >= 4.3
+* Dateutil >= 1.5
+
+as well as the interfaces:
+
+* FSL >= 4.1.0
+* SPM8/12
+
+Interfaces configuration
+========================
 **Configuring FSL**: On an Ubuntu system, FSL is usually installed at :: /usr/share/fsl. You need to add this location to your .bashrc file. Edit this file by running the shell command::
 
     gedit ~/.bashrc
@@ -136,19 +152,13 @@ use of the standalone MCR version of spm by appending the following lines to the
     export SPMMCRCMD='/home/salma/Téléchargements/spm8/run_spm8.sh /home/salma/Téléchargements/MCR/v713 script'
     export FORCE_SPMMCR='True'
 
-**Downloading procasl:** Run the shell command::
+Installation
+============
+For the moment process-asl is available as a development version. To download the source code, run the shell command::
 
     git clone https://github.com/salma1601/process-asl
 
-
-**Installing procasl:** In the ``process-asl`` directory created by the previous step, run
+In the ``process-asl`` directory created by the previous step, run
 (again, as a shell command)::
 
     python setup.py install --user
-
-**Testing the installation:** To check whether everything is set up correctly, open IPython and type
-in the following line::
-
-    In [1]: import procasl
-
-If no error occurs, you have installed procasl correctly.
